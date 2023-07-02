@@ -192,6 +192,15 @@ const menuOptions = [
     },
   },
   {
+    label: "Github",
+    key: "goGithub",
+    icon: () => {
+      return h(NIcon, null, {
+        default: () => h(GithubOne),
+      });
+    },
+  },
+  {
     label: "全局设置",
     key: "setting",
     icon: () => {
@@ -210,6 +219,8 @@ const menuOptionsSelect = (val) => {
     store.setSiteTheme(store.siteTheme === "light" ? "dark" : "light");
   } else if (val === "setting") {
     router.push("/setting");
+  } else if (val === "goGithub") {
+    goGithub()
   }
 };
 
