@@ -63,7 +63,7 @@ export default ({mode}) => defineConfig({
         background_color: "#efefef",
         icons: [
           {
-            src: "/ico/favicon.png",
+            src: loadEnv(mode, process.cwd()).VITE_BASE_URL + "/ico/favicon.png",
             sizes: "200x200",
             type: "image/png",
           },
