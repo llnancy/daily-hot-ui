@@ -2,6 +2,10 @@
 
 This template should help get you started developing with Vue 3 in Vite.
 
+## Server
+
+[https://github.com/llnancy/daily-hot](https://github.com/llnancy/daily-hot)
+
 ## Thanks
 
 This project is forked from [https://github.com/imsyy/DailyHot](https://github.com/imsyy/DailyHot), and some adjustments have been made to my personal back-end API interface. I am very grateful to the original author [imsyy](https://github.com/imsyy) for open source the code.
