@@ -18,8 +18,8 @@
           <div class="title">
             <n-avatar
               class="ico"
-              :src="`/logo/${hotType}.png`"
-              fallback-src="/ico/icon_error.png"
+              :src="`${baseUrl}/logo/${hotType}.png`"
+              :fallback-src="`${baseUrl}/ico/icon_error.png`"
             />
             <n-text class="name">{{ label }}</n-text>
             <n-text class="subtitle" :depth="2">{{ subtitle }}</n-text>
@@ -141,6 +141,8 @@ const props = defineProps({
     default: null,
   },
 });
+
+const baseUrl = import.meta.env.VITE_BASE_URL;
 
 // 更新时间
 const updateTime = ref(null);
