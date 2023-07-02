@@ -11,6 +11,8 @@ import "@/style/global.scss";
 
 const app = createApp(App);
 
+localStorage.clear();
+
 const pinia = createPinia();
 pinia.use(piniaPluginPersistedstate);
 
