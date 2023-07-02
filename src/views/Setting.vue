@@ -55,7 +55,7 @@
             <div class="desc" :style="{ opacity: element.show ? null : 0.6 }">
               <img
                 class="logo"
-                :src="`/logo/${element.value}.png`"
+                :src="`${baseUrl}/logo/${element.value}.png`"
                 alt="logo"
               />
               <n-text class="news-name" v-html="element.label" />
@@ -97,6 +97,8 @@ import draggable from "vuedraggable";
 
 const store = mainStore();
 const { newsArr, linkOpenType, headerFixed } = storeToRefs(store);
+
+const baseUrl = import.meta.env.VITE_BASE_URL;
 
 // 榜单跳转
 const linkOptions = [

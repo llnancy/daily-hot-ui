@@ -12,7 +12,7 @@
       >
         {{ item.label }}
         <template #avatar>
-          <img :src="`/logo/${item.value}.png`" alt="logo" class="logo" />
+          <img :src="`${baseUrl}/logo/${item.value}.png`" alt="logo" class="logo" />
         </template>
       </n-tag>
     </n-space>
@@ -27,7 +27,7 @@
           <template v-else>
             <div class="header">
               <div class="logo">
-                <img :src="`/logo/${listType}.png`" alt="logo" />
+                <img :src="`${baseUrl}/logo/${listType}.png`" alt="logo" />
               </div>
               <div class="name">
                 <n-text class="title">{{ label }}</n-text>
@@ -127,6 +127,8 @@ import { getHotLists } from "@/api";
 const router = useRouter();
 
 const store = mainStore();
+
+const baseUrl = import.meta.env.VITE_BASE_URL;
 
 const updateTime = ref(null);
 
