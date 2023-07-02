@@ -6,7 +6,7 @@ on:
 
 env:
   TZ: Asia/Shanghai
-  GITEE_REPO_ADDRESS: gitee.com/llnancy/dailyhot.git
+  GITEE_REPO_ADDRESS: gitee.com/llnancy/daily-hot.git
 
 jobs:
   build:
