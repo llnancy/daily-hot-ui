@@ -159,7 +159,7 @@ const listLoading = ref(false);
 const getHotListsData = (type, isNew = false) => {
   // hotListData.value = null;
   getHotLists(type, isNew).then((res) => {
-    if (res.code === 200) {
+    if (res.code === 0) {
       listLoading.value = false;
       hotListData.value = res;
       // 滚动至顶部

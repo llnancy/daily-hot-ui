@@ -149,7 +149,7 @@ const listData = ref(null);
 // 获取热榜数据
 const getHotListsData = (type, isNew = false) => {
   getHotLists(type, isNew).then((res) => {
-    if (res.code === 200) {
+    if (res.code === 0) {
       listData.value = res;
     } else {
       $message.error(res.message);
